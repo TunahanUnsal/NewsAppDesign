@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="news">News</string>
+    <string name="news_time_1">1 day ago</string>
+    <string name="news_time">News Time</string>
+    <string name="news_image">News image</string>
+    <string name="image1">news image</string>
+
+
+    <string name="news_head_1">METEOR WARNING</string>
+    <string name="news_body_1">Meteor captured by Jersey camera over English Channel</string>
+
+    <string name="news_head_2">	EUR/USD FORECAST</string>
+    <string name="news_body_2">ECB leaves investors with a bitter taste in their mouths</string>
+
+    <string name="news_head_3">REAL ESTATE STATE</string>
+    <string name="news_body_3">Applications to refinance a home loan dropped 4%</string>
+
+    <string name="news_head_4">PLANE CRASH ALERT</string>
+    <string name="news_body_4">Plane crash fatalities rose in 2020</string>
+
+    <string name="news_head_5">METEOR WARNING</string>
+    <string name="news_body_5">Meteor captured by Jersey camera over English Channel</string>
+
+    <string name="news_head_6">NEW TYPE OF AURORA</string>
+    <string name="news_body_6">Physicists describe a new phenomenon they call diffuse auroral erasers</string>
+
+    <string name="news_head_7">LUMBER PRICES DIVE</string>
+    <string name="news_body_7">Lumber futures tanked more than 40% in June alone</string>
+
+    <string name="news_head_8">AFGHANISTAN: FIRST FOREIGNERS FLY OUT</string>
+    <string name="news_body_8">Reuters news agency reports that 113 people were on the plane</string>
+
+    <string name="news_head_9">COVID-19 VACCINES CUT RISK</string>
+    <string name="news_body_9">Being fully vaccinated against Covid-19 not only cuts the risk of catching it</string>
+
+
+</resources>
