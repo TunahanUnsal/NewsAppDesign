@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.View
+import android.view.animation.AnimationUtils
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -38,6 +39,14 @@ class MainActivity : AppCompatActivity() {
         imageRandom(applicationContext)
         fragmentWizard()
         listeners()
+
+
+        var animationSlideDown = AnimationUtils.loadAnimation(this, R.anim.slide_left)
+        binding.upperFrame.startAnimation(animationSlideDown)
+
+        animationSlideDown = AnimationUtils.loadAnimation(this, R.anim.slide_right)
+        binding.upperFrame.startAnimation(animationSlideDown)
+
     }
 
     override fun onBackPressed() {

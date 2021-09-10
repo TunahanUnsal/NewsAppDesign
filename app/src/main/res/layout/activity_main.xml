@@ -20,6 +20,7 @@
         android:layout_height="match_parent">
 
         <FrameLayout
+            android:id="@+id/upperFrame"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@android:color/white"
@@ -29,14 +30,14 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/reda"
-                android:gravity="center_vertical"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/reda"
                 android:text="@string/news"
-                android:textColor="@android:color/black"
+                android:textColor="#000"
                 android:textSize="20sp" />
 
             <ImageView

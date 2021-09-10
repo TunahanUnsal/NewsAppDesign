@@ -48,4 +48,7 @@ dependencies {
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
     implementation 'com.github.flavienlaurent.discrollview:library:0.0.2@aar'
     implementation 'com.novoda:drop-cap:1.1.0'
+    implementation "com.hanks:htextview-base:0.1.6"
+    implementation "com.hanks:htextview-typer:0.1.6"
+    implementation "com.hanks:htextview-fade:0.1.6"
 }
