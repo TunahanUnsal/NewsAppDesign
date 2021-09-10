@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.Window
+import android.view.animation.LinearInterpolator
 import android.widget.FrameLayout
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.Fragment
@@ -23,9 +24,23 @@ class FragmentController {
     companion object{
 
         @JvmStatic
+        fun alphaSet(view : View,time : Long,delay : Long){
+
+            view.alpha = 0.0f
+            view.animate().apply {
+                interpolator = LinearInterpolator()
+                duration = time
+                alpha(1f)
+                startDelay = delay
+                start()
+            }
+
+        }
+
+        @JvmStatic
         fun createFragmentPreview(){
 
-            for (i in 0..9) {
+            for (i in 0..7) {
 
                 val fragment = PreviewFragment.newInstance(i.toString())
                 previewFragmentList.add(fragment)
@@ -55,17 +70,13 @@ class FragmentController {
         @JvmStatic
         fun imageRandom(mContex : Context) {
 
-
-
-            var drawable = AppCompatResources.getDrawable(mContex,R.drawable.image3)
-            imageList.add(drawable)
-            drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme8)
+            var drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme1)
             imageList.add(drawable)
             drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme2)
             imageList.add(drawable)
-            drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme1)
-            imageList.add(drawable)
             drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme3)
+            imageList.add(drawable)
+            drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme4)
             imageList.add(drawable)
             drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme5)
             imageList.add(drawable)
@@ -73,9 +84,8 @@ class FragmentController {
             imageList.add(drawable)
             drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme7)
             imageList.add(drawable)
-            drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme4)
+            drawable = AppCompatResources.getDrawable(mContex,R.drawable.deneme8)
             imageList.add(drawable)
-
 
             var head = mContex.getString(R.string.news_head_1)
             headList.add(head)
@@ -93,8 +103,7 @@ class FragmentController {
             headList.add(head)
             head = mContex.getString(R.string.news_head_9)
             headList.add(head)
-            head = mContex.getString(R.string.news_head_5)
-            headList.add(head)
+
 
             var body = mContex.getString(R.string.news_body_1)
             bodyList.add(body)
@@ -111,8 +120,6 @@ class FragmentController {
             body = mContex.getString(R.string.news_body_8)
             bodyList.add(body)
             body = mContex.getString(R.string.news_body_9)
-            bodyList.add(body)
-            body = mContex.getString(R.string.news_body_5)
             bodyList.add(body)
 
         }

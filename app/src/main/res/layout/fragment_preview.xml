@@ -17,33 +17,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_gravity="center_horizontal|bottom"
-            android:id="@+id/textViewHead"
-            android:textColor="@android:color/white"
-            android:layout_width="match_parent"
-            android:gravity="bottom|start"
-            android:layout_marginBottom="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reda_bold"
-            android:text="@string/news_head_1"
-            android:textSize="36sp" />
 
-        <TextView
-            android:layout_gravity="center_horizontal|bottom"
-            android:id="@+id/textViewBody"
-            android:textColor="@android:color/white"
-            android:layout_width="match_parent"
-            android:gravity="bottom|start"
-            android:layout_marginStart="10dp"
-            android:textAllCaps="false"
-            android:layout_marginBottom="10dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reda"
-            android:text="@string/news_body_1"
-            android:textSize="20sp" />
 
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_background_preview"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center_horizontal|bottom"
+                android:id="@+id/textViewHead"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:gravity="bottom|start"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="@string/news_head_1"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_gravity="center_horizontal|bottom"
+                android:id="@+id/textViewBody"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:gravity="bottom|start"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/light"
+                android:text="@string/news_body_1"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
 
     </FrameLayout>
 </layout>

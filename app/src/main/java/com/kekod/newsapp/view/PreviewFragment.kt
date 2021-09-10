@@ -33,20 +33,14 @@ class PreviewFragment : Fragment() {
         fragmentPreviewBinding =  FragmentPreviewBinding.inflate(inflater,container,false)
         fragmentPreviewBinding.count = param1
         listeners()
-        randomDay()
 
         fragmentPreviewBinding.fragmentPreview.background = imageList[param1?.toInt()!!]
         fragmentPreviewBinding.textViewHead.text = headList[param1?.toInt()!!]
         fragmentPreviewBinding.textViewBody.text = bodyList[param1?.toInt()!!]
 
-
         return fragmentPreviewBinding.root
     }
-    private fun randomDay(){
 
-        val rnd = (1..24).random()
-        fragmentPreviewBinding.day = "$rnd hour ago"
-    }
     private fun listeners(){
         fragmentPreviewBinding.fragmentPreview.setOnClickListener {
 

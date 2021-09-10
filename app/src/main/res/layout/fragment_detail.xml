@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -8,17 +9,90 @@
             type="String"/>
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@drawable/ic_background"
-        android:layout_height="1200dp"
+        android:layout_height="wrap_content"
         tools:context=".view.DetailFragment">
 
         <TextView
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@{count}" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Sept. 10, Wed. 03:01 pm"
+            app:layout_constraintBottom_toTopOf="@+id/textView_short"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_head" />
 
-    </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView_news"
+            android:layout_width="wrap_content"
+            android:src="@drawable/deneme2"
+            android:layout_height="275dp"
+            android:layout_gravity="top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_head"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/light"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="37sp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_news" />
+
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/textView_short"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/light"
+            android:textColor="@android:color/black"
+            android:paddingStart="10dp"
+            android:text="@string/text_short"
+            android:paddingEnd="10dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_head" />
+
+        <com.novoda.dropcap.DropCapView
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:id="@+id/view_drop_cap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_short"
+            style="@style/DropCap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_long" />
+
+        <com.novoda.dropcap.DropCapView
+            android:id="@+id/textView_long"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/deneme"
+            android:text="@string/text_long"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_drop_cap" />
+
+        <LinearLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_long"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

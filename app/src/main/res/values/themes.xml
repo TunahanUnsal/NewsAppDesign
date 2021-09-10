@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="AppFullScreenTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
 
         <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
@@ -14,6 +14,32 @@
         <item name="android:windowDisablePreview">true</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
 
+    </style>
+
+    <style name="DropCap">
+        <item name="android:paddingLeft">@dimen/drop_cap_padding_left</item>
+        <item name="android:paddingTop">@dimen/drop_cap_padding_top</item>
+        <item name="android:paddingRight">@dimen/drop_cap_padding_right</item>
+        <item name="android:paddingBottom">@dimen/drop_cap_padding_bottom</item>
+        <item name="dropCapTextSize">@dimen/drop_cap_text</item>
+        <item name="numberOfDropCaps">1</item>
+        <item name="dropCapFontPath">@font/light</item>
+        <item name="copyTextSize">@dimen/copy_text</item>
+        <item name="copyFontPath">@font/light</item>
+        <item name="lineSpacingExtra">@dimen/drop_cap_linespacing_extra</item>
+    </style>
+
+    <style name="deneme">
+        <item name="android:paddingLeft">@dimen/drop_cap_padding_left</item>
+        <item name="android:paddingTop">@dimen/drop_cap_padding_top</item>
+        <item name="android:paddingRight">@dimen/drop_cap_padding_right</item>
+        <item name="android:paddingBottom">@dimen/drop_cap_padding_bottom</item>
+        <item name="dropCapTextSize">@dimen/drop_cap_text</item>
+        <item name="numberOfDropCaps">0</item>
+        <item name="dropCapFontPath">@font/light</item>
+        <item name="copyTextSize">@dimen/copy_text</item>
+        <item name="copyFontPath">@font/light</item>
+        <item name="lineSpacingExtra">@dimen/drop_cap_linespacing_extra</item>
     </style>
 
     <style name="action_bar_theme" parent="@android:style/Widget.Holo.ActionBar">

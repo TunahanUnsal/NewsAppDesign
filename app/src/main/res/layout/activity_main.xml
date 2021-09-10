@@ -39,17 +39,35 @@
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sun"
+                android:layout_marginStart="12dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/light"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:layout_marginEnd="12dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:text="@string/temp"/>
+
             <TextView
                 android:id="@+id/dateText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/reda"
+                android:fontFamily="@font/light"
                 android:gravity="end|center_vertical"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:text="@{date}"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="13sp" />
 
             <ImageButton
                 android:id="@+id/exit"
@@ -124,13 +142,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 </FrameLayout>
-
-                <FrameLayout
-                    android:id="@+id/frame9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                </FrameLayout>
-
 
             </LinearLayout>
 

@@ -35,6 +35,11 @@
 
     <string name="news_head_9">COVID-19 VACCINES CUT RISK</string>
     <string name="news_body_9">Being fully vaccinated against Covid-19 not only cuts the risk of catching it</string>
+    <string name="temp">32°</string>
+    <string name="text_short">Lorem ipsum dolor sit amet, consect adipiscing elit. Aliquam lacinia aliquam est. Vivamus vitae risus in sem elementum scelerisque et in dui.</string>
+    <string name="text_long">Lorem ipsum dolor sit amet, consect adipiscing elit. Aliquam lacinia aliquam est. Vivamus vitae risus in sem elementum scelerisque et in dui.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia aliquam est. Vivamus vitae risus in sem elementum scelerisque et in dui.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia aliquam est. Vivamus vitae risus in sem elementum scelerisque et in dui.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia aliquam est. Vivamus vitae risus in sem elementum scelerisque et in dui.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia aliquam est. Vivamus vitae risus in sem elementum scelerisque et in dui.</string>
+
+
 
 
 </resources>

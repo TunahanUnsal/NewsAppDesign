@@ -2,6 +2,8 @@ package com.kekod.newsapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import androidx.databinding.DataBindingUtil
@@ -9,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.kekod.newsapp.R
 import com.kekod.newsapp.databinding.ActivityMainBinding
+import com.kekod.newsapp.viewModel.FragmentController
 import com.kekod.newsapp.viewModel.FragmentController.Companion.createFragmentDetail
 import com.kekod.newsapp.viewModel.FragmentController.Companion.createFragmentPreview
 import com.kekod.newsapp.viewModel.FragmentController.Companion.hideNavigationBar
@@ -17,6 +20,7 @@ import com.kekod.newsapp.viewModel.detailFragmentList
 import com.kekod.newsapp.viewModel.frameList
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,9 +30,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         hideNavigationBar(window)  //for bottom navigation bar
-        binding.date = getDate()
         fragmentSupportManager = supportFragmentManager
         frameBinding()
+        clock()
         createFragmentPreview()
         createFragmentDetail()
         imageRandom(applicationContext)
@@ -59,8 +63,6 @@ class MainActivity : AppCompatActivity() {
         frameList.add(binding.frame6)
         frameList.add(binding.frame7)
         frameList.add(binding.frame8)
-        frameList.add(binding.frame9)
-
     }
 
     private fun getDate(): String {
@@ -79,6 +81,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun clock() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            binding.date = getDate()
+        }, 1000)
+    }
+
     companion object {
 
         lateinit var binding: ActivityMainBinding
@@ -91,8 +99,10 @@ class MainActivity : AppCompatActivity() {
             }
             fragmentSupportManager.beginTransaction()
                 .replace(R.id.frame1, detailFragmentList[count.toInt()]).commit()
+            FragmentController.alphaSet(binding.frame1, 1000, 0)
             binding.exit.visibility = View.VISIBLE
             binding.dateText.visibility = View.GONE
+            binding.scrollView.scrollTo(0,0)
         }
     }
 }
